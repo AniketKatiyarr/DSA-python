@@ -1,0 +1,11 @@
+#1d array used here
+print("how many element do u want in array?",end="")
+num = int(input())
+arr = []
+print("/enter",num,"element",end="")
+for i in range(num):
+    element = input()
+    arr.append(element)
+print("/nThe array elemnt are:")
+for i in range(num):
+    print(arr[i],end="")
