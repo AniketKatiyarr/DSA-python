@@ -1,20 +1,47 @@
-import collections
-def bfs(graph,root):
-    visited,queue = set(), collections.deque[root]
-    visited.add(root)
+class graph:
+    def __init__(self):
+        self.list = {}
     
-    while queue:
-        vertex = queue.popleft()
-        print(str(vertex)+" ",end="")
+    def createEdge(self,start,end):
+        if start in self.list.keys():
+            self.list[start].append(end)
+        else:
+            self.list[start] = [end]
         
-        for neighbour in graph[vertex]:
-            if neighbour not in visited:
-                visited.add(neighbour)
-                queue.append(neighbour)
+    def display(self):
+        for i in self.list:
+            print(i,'->','->'.join([str(j) for j in self.list[i]]))
+    
+    def bfs(self,startnode):
+        visited = [False] *len(self.list)
+        queue = []
+        
+        visited[startnode] = True
+        queue.append(startnode)
+        
+        while queue:
+            startnode = queue.pop(0)
+            print(startnode,end=" ")
+           
+            for i in self.list:
+                if visited[i] == False:
+                    queue.append(i)
+                    visited[i] = True
+        
 
-if __name__ =="__main__":
-    
-    graph= {0:[1,2],1:[2],2:[3],3:[1,2]}
-    print("BFS traversal")
-    bfs(graph,0)
-    
+        
+        
+ 
+g = graph()
+g.createEdge(0,1)
+g.createEdge(0,2)
+g.createEdge(1,2)
+g.createEdge(2,0)
+g.createEdge(2,3)
+g.createEdge(3,3)
+# g.createEdge(3,4)  
+
+g.display()
+
+g.bfs(1)
+                  
