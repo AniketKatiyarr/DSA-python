@@ -1,0 +1,37 @@
+{
+  "question": [
+    "Q1. What is the Python ?",
+    "Q2. Is Tuple mutable?",
+    "Q3. When was Python first created and used?",
+    "Q4. Data types of python are?"
+  ],
+  "answer": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "options": [
+
+    ["Programming Language",
+      "Query Language",
+      "Not a Language",
+      "May be Language"
+    ],
+    ["Yes",
+      "No",
+      "Not sure",
+      "None of the above"
+    ],
+    [ "in june 1989",
+      "in april 1990",
+      " in December 1989",
+      "None of the above"
+    ],
+    [ "Set",
+      "Bolean",
+      "Tuple",
+      "All of the above"
+    ]
+  ]
+}
